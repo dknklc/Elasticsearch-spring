@@ -5,6 +5,70 @@
     <img src="full-text-search.png" alt="full-text-search" width="%100" height="%100" style="border-radius: 20px">
 </p>
 
+## Elasticsearch Query Types
+
+<details>
+<summary>Match Query</summary>
+Returns documents that match a provided text, number, date or boolean value. The provided text is analyzed before matching.
+
+The match query is the standard query for performing a full-text search, including options for fuzzy matching.
+</details>
+
+<details>
+<summary>Term Query</summary>
+Returns documents that contain an exact term in a provided field.
+You can use the term query to find documents based on a precise value such as a price, a product ID, or a username.
+</details>
+
+<details>
+<summary>Bool Query</summary>
+A query that matches documents matching boolean combinations of other queries.
+The bool query maps to Lucene BooleanQuery. It is built using one or more boolean clauses, each clause with a typed occurrence. The occurrence types are:
+    
+must
+The clause (query) must appear in matching documents and will contribute to the score.
+    
+filter
+The clause (query) must appear in matching documents. However unlike must the score of the query will be ignored. Filter clauses are executed in filter context, meaning that scoring is ignored and clauses are considered for caching.
+    
+should
+The clause (query) should appear in the matching document.
+    
+must_not
+The clause (query) must not appear in the matching documents. Clauses are executed in filter context meaning that scoring is ignored and clauses are considered for caching. Because scoring is ignored, a score of 0 for all documents is returned.
+</details>
+
+<details>
+<summary>Range Query</summary>
+Returns documents that contain terms within a provided range
+</details>
+
+<details>
+<summary>Fuzzy Query</summary>
+Returns documents that contain terms similar to the search term, as measured by a Levenshtein edit distance.
+
+An edit distance is the number of one-character changes needed to turn one term into another. These changes can include:
+
+Changing a character (box → fox)
+Removing a character (black → lack)
+Inserting a character (sic → sick)
+Transposing two adjacent characters (act → cat)
+To find similar terms, the fuzzy query creates a set of all possible variations, or expansions, of the search term within a specified edit distance. The query then returns exact matches for each expansion.
+</details>
+
+<details>
+<summary>Wildcard Query</summary>
+Returns documents that contain terms matching a wildcard pattern.
+    
+A wildcard operator is a placeholder that matches one or more characters. For example, the * wildcard operator matches zero or more characters. You can combine wildcard operators with other characters to create a wildcard pattern.
+</details>
+
+<details>
+<summary>Prefix Query</summary>
+Returns documents that contain a specific prefix in a provided field.
+</details>
+
+
 
 ## Getting information about cluster and nodes
 Syntax: 
