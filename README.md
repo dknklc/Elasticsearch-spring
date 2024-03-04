@@ -139,3 +139,6 @@ Example:
 DELETE favorite_candy/_doc/1
 ```
 
+## REFERENCES
+# https://www.elastic.co/guide/en/elasticsearch/reference/current/elasticsearch-intro.html
+# https://github.com/LisaHJung
