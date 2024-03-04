@@ -1,5 +1,10 @@
 ![](./Elasticsearch.png)
 
+## Full Text Search
+<p align="center">
+    <img src="png/full-text-search.png" alt="full-text-search" width="%100" height="%100" style="border-radius: 20px">
+</p>
+
 
 ## Getting information about cluster and nodes
 Syntax: 
