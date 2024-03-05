@@ -1,1 +1,1 @@
-![](./assets/assets/Elasticsearch.png)
+![](./assets/Elasticsearch.png)
